@@ -1,0 +1,130 @@
+body{
+    color:rgba(0,0,0,.6);
+    margin:0;
+    font-size:12pt;
+    font-family:'Segoe UI',Verdana,Arial; 
+}
+
+a{
+    width:100%;
+    color: rgba(0, 130, 135, .6);
+    text-decoration:none;
+}
+
+a:focus{
+    outline:none;
+}
+
+a:visited{
+    color: rgba(0, 130, 135, .6);
+}
+
+a:hover{
+    color: rgba(37, 187, 196, .5);
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    padding:0 0 0 20px;
+}
+
+li{
+    margin: 0 0 5px 0;
+    padding:5px 3px;
+}
+
+li:hover{
+    color:white;
+    background-color:rgba(20, 145, 152, .4);
+}
+li a{
+    display: block;
+}
+
+li:hover a{
+    color:white;
+}
+
+.header{
+    margin:12px 5px;
+    font-size:28pt;
+    font-weight:normal;
+}
+
+.header a,.header a:visited,.header a:focus,.header a:active{
+    color: rgba(0,0,0,.5);
+}
+
+.header a:hover{
+    color: rgba(0, 130, 135, .6);
+}
+
+.left{
+    width:10%;
+    float: left;
+}
+
+.right{
+    width:88%;
+    float:right;
+}
+
+.footer{
+    float: left;
+    width:100%;
+    margin-top:15px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.entry{
+    margin:0 0 50px 0;
+}
+
+.title{
+    font-size:16pt;
+    margin:0 0 8px 0;
+}
+
+.content{
+    margin:5px 0;
+}
+
+.info{
+    margin: 10px 0;
+}
+
+.info a,.info span{
+    font-size: 11pt;
+    margin:0 10px 0 0;
+    padding: 0 5px;
+    display: inline;
+    background-color: rgba(20, 145, 152, .4);
+    color:white;
+}
+
+.info a:hover{
+    cursor: pointer;
+    color: rgba(0, 130, 135, .6);
+    background-color: white;
+}
+
+.page{
+    width:100%;
+    float: left;
+}
+
+.comments{
+    width:61%;
+    margin:15px 0;
+}
+
+.textarea-wrapper{
+    border-radius: 0;
+}
+
+
+
+
+
