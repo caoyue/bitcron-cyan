@@ -2,7 +2,7 @@ body{
     color:rgba(0,0,0,.6);
     margin:0;
     font-size:12pt;
-    font-family:'Segoe UI',Verdana,Arial; 
+    font-family:'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei'; 
 }
 
 a{
@@ -58,6 +58,10 @@ li:hover a{
 
 .header a:hover{
     color: rgba(0, 130, 135, .6);
+}
+
+.header span{
+    font-size: 16pt;
 }
 
 .left{
@@ -124,6 +128,16 @@ li:hover a{
     border-radius: 0;
 }
 
+.listing-item,.listing_title{
+    width:61%;
+}
+
+/* For Mobile */
+@media screen and (max-width: 800px) {
+    .header,.left,.footer{
+        display: none;
+    }
+}
 
 
 
