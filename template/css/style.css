@@ -2,7 +2,18 @@ body{
     color:rgba(0,0,0,.6);
     margin:0;
     font-size:12pt;
-    font-family:'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei'; 
+    font-family:'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei';
+}
+
+code,pre{
+    font-family: "Deja Vu Sans Mono",Consolas,Monaco,"Courier New",Courier,monospace;
+    padding:1px 10px;
+    line-height:36px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #DADADA;
+    overflow-x: auto;
 }
 
 a{
