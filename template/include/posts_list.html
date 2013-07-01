@@ -2,7 +2,7 @@
 <div class="entry">
 	<div class='title'>
 		<a href="{{post.url}}">{{post.title}}</a>
-	</div>				
+	</div>
 	<div class="content">
 		{{  post.content }}
 	</div>
@@ -11,11 +11,12 @@
 		<a href="/tags/{{ tag }}">{{ tag }}</a>
 		{% endfor %}</div>
 </div>
-{% endfor %}			
-<div class="pager">  
+{% endfor %}
+<div class="pager">
 	{% if paginator.has_previous %}
 	<a class="pre" href="{{ paginator.previous_page_url }}">Previous</a>
 	{% endif %}
+	&nbsp;&nbsp;&nbsp;
 	{% if paginator.has_next %}
 	<a class="next" href="{{ paginator.next_page_url}}">Next</a>
 	{% endif %}
