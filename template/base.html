@@ -5,6 +5,30 @@
 	<link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
 	<link rel="icon" type="image/png" href="/t/img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/t/css/style.css">
+		<script type="text/javascript">
+			function ChangeStyle(){
+			    var doc=document;
+			    var style=doc.createElement("style");
+			    style.setAttribute("type", "text/css");
+			    cssString = ".wrap{width:100% !important;margin:0 !important;}" +
+							".left{width:13% !important;}"+
+							".left, .header{margin-left: 0;}" +
+							".right{width:87% ;}.right .entry{margin: 0 5% 50px 0;}";
+
+			    if(style.styleSheet){ // IE
+			        style.styleSheet.cssText = cssString;
+			    } else {
+			        var cssText = doc.createTextNode(cssString);
+			        style.appendChild(cssText);
+			    }
+
+			    var heads = doc.getElementsByTagName("head");
+			    if(heads.length)
+			        heads[0].appendChild(style);
+			    else
+			        doc.documentElement.appendChild(style);
+			}
+		</script>
 </head>
 <body>
 	<div class="wrap">
@@ -29,7 +53,7 @@
 		</div>
 
 		<div class="footer">
-			©2013 <a href="http://blog.caoyue.me">且听疯吟</a>. Designed by <a href="http://caoyue.me" target="_blank">caoyue</a>. Powered by <a href="http://farbox.com" target="_blank">Farbox</a>.
+			©2013 <a href="http://blog.caoyue.me">且听疯吟</a>. Designed by <a href="http://caoyue.me" target="_blank">caoyue</a>. Powered by <a href="http://farbox.com" target="_blank">Farbox</a>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="ChangeStyle()">wide view</a>
 		</div>
 	</div>
 </body>

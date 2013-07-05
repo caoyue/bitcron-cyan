@@ -33,9 +33,15 @@ a:hover{
     color: rgba(37, 187, 196, .5);
 }
 
+.wrap{
+    width:800px;
+    margin:0 auto;
+    padding:0;
+}
+
 ul{
     list-style:none;
-    margin:0;
+    margin:0 10px 0 0;
     padding:0 0 0 20px;
 }
 
@@ -57,8 +63,9 @@ li:hover a{
 }
 
 .header{
-    margin:12px 5px;
-    padding-left: 30px;
+    margin:1.5% 0.7%;
+    margin-left: -15%;
+    padding-left: 2.5%;
     font-size:28pt;
     font-weight:normal;
 }
@@ -76,17 +83,18 @@ li:hover a{
 }
 
 .left{
-    width:10%;
+    width:15%;
+    margin-left:-15%;
     float: left;
 }
 
 .left .list{
-    padding-left:50px;
+    padding-left:30%;
 }
 
 .right{
-    width:88%;
-    float:right;
+    float: left;;
+
 }
 
 .content{
@@ -102,8 +110,7 @@ li:hover a{
 }
 
 .entry{
-    width:70%;
-    margin:0 0 50px 0;
+    margin:0 3% 50px 3%;
 }
 
 .title{
@@ -141,7 +148,6 @@ li:hover a{
 }
 
 .comments{
-    width:61%;
     margin:15px 0;
 }
 
@@ -153,10 +159,44 @@ li:hover a{
     width:61%;
 }
 
-/* For Mobile */
-@media screen and (max-width: 800px) {
+/*wide mode*/
+
+/*.wrap{
+    width:100% !important;
+    margin:0 !important;
+}
+.left{
+    width:13% !important;
+}
+.left, .header{
+    margin-left: 0;
+}
+
+.left .list{
+    margin-right:25% !important;
+}
+.right{
+        width:87% ;
+}
+.right .entry{
+    margin: 0 5% 50px 0;
+}*/
+
+
+/* For Mobile and small screen*/
+@media screen and (max-width: 900px) {
     .header,.left,.footer{
         display: none;
+    }
+    .wrap{
+        width:100% ;
+        margin:0;
+    }
+    .right{
+        width: 100% !important;
+    }
+    .right .entry{
+        margin-left: 3% !important;
     }
 }
 
@@ -224,3 +264,4 @@ li:hover a{
 .vg { color: #bb60d5 } /* Name.Variable.Global */
 .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .il { color: #40a070 } /* Literal.Number.Integer.Long */
+
