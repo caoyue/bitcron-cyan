@@ -15,10 +15,11 @@
 			str = content.innerHTML;
 			var reg=new RegExp("https:\/\/gist.github.com\/[a-zA-Z0-9\/.]+");
 			var gist = reg.exec(str);
-			console.log(gist);
-			document.write("#================Gist====================")
-			document.write("<script type='text/javascript' src=" + gist + "><\/script>");
-			content.innerHTML = str.replace(reg,"");
+			if (gist != null) {
+				document.write("#================Gist====================")
+				document.write("<script type='text/javascript' src=" + gist + "><\/script>");
+				content.innerHTML = str.replace(reg,"");
+			};
 	</script>
 	<div class="info"><span>Posted on {{ post.date | date('%Y-%m-%d %H:%M') }}</span>
 		{% for tag in post.tags %}

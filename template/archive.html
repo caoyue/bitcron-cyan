@@ -2,12 +2,12 @@
 {% block title %}Archive - {{ site.title }}{% endblock %}
 
 {% block content %}
-    <ul class="list_with_title">
+    <ul class="list_with_title list">
     {% for month, posts in archive %}
         <li class="listing_title">{{ month }}</li>
-        <ul class='listing'>
+        <ul class='listing list'>
         {% for post in posts %}
-            <li class="listing-item">                
+            <li class="listing-item">
                 <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li>
         {% endfor %}

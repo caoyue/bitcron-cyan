@@ -16,6 +16,18 @@ code,pre,blockquote{
     overflow-x: auto;
 }
 
+
+hr{
+    margin: 38px 0;
+    border: none;
+    border-bottom: 1px dashed #dcdcdc;
+    color: #dcdcdc;
+    height: 1px;
+    line-height:1px;
+    font-size:1px;
+    overflow: hidden;
+}
+
 a{
     color: rgba(0, 130, 135, .6);
     text-decoration:none;
@@ -39,26 +51,26 @@ a:hover{
     padding:0;
 }
 
-ul{
+.list{
     list-style:none;
     margin:0 10px 0 0;
     padding:0 0 0 20px;
 }
 
-li{
+.list li{
     margin: 0 0 5px 0;
     padding:5px 3px;
 }
 
-li:hover{
+.list li:hover{
     color:white;
     background-color:rgba(20, 145, 152, .4);
 }
-li a{
+.list li a{
     display: block;
 }
 
-li:hover a{
+.list li:hover a{
     color:white;
 }
 
@@ -153,10 +165,6 @@ li:hover a{
 
 .textarea-wrapper{
     border-radius: 0;
-}
-
-.listing-item,.listing_title{
-    width:61%;
 }
 
 /*wide mode*/

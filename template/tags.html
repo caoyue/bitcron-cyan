@@ -2,11 +2,11 @@
 {% block title %}Tag - {{ tags | join(' ') }}{% endblock %}
 
 {% block content %}
-    <ul class="list_with_title">
+    <ul class="list_with_title list">
         <li class="listing_title">{{ tags | join(' ') }}</li>
-        <ul class='listing'>
+        <ul class='listing list'>
         {% for post in posts %}
-            <li class="listing-item">                
+            <li class="listing-item">
                 <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li>
         {% endfor %}
