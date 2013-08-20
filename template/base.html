@@ -5,6 +5,26 @@
 	<link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
 	<link rel="icon" type="image/png" href="/t/img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/t/css/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<a href="/">{{ site.title }}</a>
+			<span>{{ site.description }}</span>
+		</div>
+		<div class="left">
+			<ul class="list">
+				<li><a href="/" title="Home">home</a></li>
+				<li><a href="/archive" title="Archive">archive</a></li>
+				{% for k in site.configs.links.split("|") %}
+                <li><a href="{{ k.split(",")[1] }}" target="_blank">{{ k.split(",")[0] }}</a></li>
+                {% endfor %}
+			</ul>
+		</div>
+		<div class="right">
+			{% block content %}
+    		{% endblock %}
+		</div>
 		<script type="text/javascript">
 			function ChangeStyle(){
 			    var doc=document;
@@ -29,31 +49,8 @@
 			        doc.documentElement.appendChild(style);
 			}
 		</script>
-</head>
-<body>
-	<div class="wrap">
-		<div class="header">
-			<a href="/">{{ site.title or '且听疯吟'}}</a>
-			<span>{{ site.description or '在此记录扯淡的青春'}}</span>
-		</div>
-		<div class="left">
-			<ul class="list">
-				<li><a href="/" title="Home">Home</a></li>
-				<li><a href="/archive" title="Archive">Archive</a></li>
-				<li><a href="https://twitter.com/caoyue" title="My Twitter" target="_blank">Twitter</a></li>
-				<li><a href="http://weibo.com/c4oyu3" title="My Weibo" target="_blank">Weibo</a></li>
-				<li><a href="http://www.douban.com/people/caoyue/" title="My Douban" target="_blank">Douban</a></li>
-				<li><a href="https://github.com/caoyue" title="My GitHub" target="_blank">Github</a></li>
-				<li><a href="http://caoyue.me" title="About" target="_blank">About</a></li>
-			</ul>
-		</div>
-		<div class="right">
-			{% block content %}
-    		{% endblock %}
-		</div>
-
 		<div class="footer">
-			©2013 <a href="http://blog.caoyue.me">且听疯吟</a>. Designed by <a href="http://caoyue.me" target="_blank">caoyue</a>. Powered by <a href="http://farbox.com" target="_blank">Farbox</a>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="ChangeStyle()">wide view</a>
+			©2013 <a href="http://{{ site.domain }}">{{ site.title }}</a>. Designed by <a href="http://caoyue.me" target="_blank">caoyue</a>. Powered by <a href="http://farbox.com" target="_blank">Farbox</a>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="ChangeStyle()">wide view</a>
 		</div>
 	</div>
 </body>

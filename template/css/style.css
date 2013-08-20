@@ -1,7 +1,7 @@
 body{
     color:rgba(0,0,0,.6);
     margin:0;
-    font-size:12pt;
+    font-size:16px;
     font-family:'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei';
 }
 
@@ -78,7 +78,7 @@ a:hover{
     margin:1.5% 0.7%;
     margin-left: -15%;
     padding-left: 2.5%;
-    font-size:28pt;
+    font-size:36px;
     font-weight:normal;
 }
 
@@ -91,7 +91,7 @@ a:hover{
 }
 
 .header span{
-    font-size: 16pt;
+    font-size: 22px;
 }
 
 .left{
@@ -106,7 +106,7 @@ a:hover{
 
 .right{
     float: left;;
-
+    min-width: 752px;
 }
 
 .content{
@@ -118,7 +118,7 @@ a:hover{
     width:100%;
     margin-top:15px;
     text-align: center;
-    font-size: 10pt;
+    font-size: 14px;
 }
 
 .entry{
@@ -126,7 +126,7 @@ a:hover{
 }
 
 .title{
-    font-size:16pt;
+    font-size:20px;
     color:rgba(0, 130, 135, .6);
     margin:0 0 8px 0;
 }
@@ -140,7 +140,7 @@ a:hover{
 }
 
 .info a,.info span{
-    font-size: 11pt;
+    font-size: 16px;
     margin:0 10px 0 0;
     padding: 0 5px;
     display: inline;
@@ -152,6 +152,10 @@ a:hover{
     cursor: pointer;
     color: rgba(0, 130, 135, .6);
     background-color: white;
+}
+
+.pager{
+    padding-left: 20px;
 }
 
 .page{
