@@ -4,7 +4,7 @@
 {% block content %}
     <ul class="list_with_title list">
     {% for month, posts in archive %}
-        <li class="listing_title">{{ month }}</li>
+        <li class="listing_title">{{ month }} ({{ posts | length }}) </li>
         <ul class='listing list'>
         {% for post in posts %}
             <li class="listing-item">

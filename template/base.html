@@ -16,6 +16,7 @@
 			<ul class="list">
 				<li><a href="/" title="Home">home</a></li>
 				<li><a href="/archive" title="Archive">archive</a></li>
+				<li><a href="/tags" title="Archive">tags</a></li>
 				{% for k in site.configs.links.split("|") %}
                 <li><a href="{{ k.split(",")[1] }}" target="_blank">{{ k.split(",")[0] }}</a></li>
                 {% endfor %}

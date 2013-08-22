@@ -1,15 +1,31 @@
 {% extends 'base.html' %}
-{% block title %}Tag - {{ tags | join(' ') }}{% endblock %}
+{% block title %}
+{% if not tags %}
+Tags
+{% else %}
+Tag - {{ tags | join(' ') }}
+{% endif %}
+{% endblock %}
 
 {% block content %}
-    <ul class="list_with_title list">
-        <li class="listing_title">{{ tags | join(' ') }}</li>
-        <ul class='listing list'>
-        {% for post in posts %}
-            <li class="listing-item">
-                <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            </li>
-        {% endfor %}
-        </ul>
+{% if not tags %}
+<ul class='listing list'>
+{% for name,count in site.tags %}
+    <li class="listing-item">
+        <a href="/tags/{{ name }}">{{ name }}({{ count }})</a>
+    </li>
+{% endfor %}
+</ul>
+{% else %}
+<ul class="list_with_title list">
+    <li class="listing_title">{{ tags | join(' ') }}({{ posts | length }})</li>
+    <ul class='listing list'>
+    {% for post in posts %}
+        <li class="listing-item">
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
     </ul>
+</ul>
+{% endif %}
 {% endblock %}
