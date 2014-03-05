@@ -26,10 +26,5 @@
 		<a href="/tags/{{ tag }}">{{ tag }}</a>
 		{% endfor %}</div>
 </div>
-    {% set custom_comment=get_text_file('comment_js').raw_content %}
-    {% if custom_comment %}
-        <div id="disqus_thread" class="comments"></div>
-        {{ custom_comment }}
-    {% endif %}
 
 {% endblock %}
