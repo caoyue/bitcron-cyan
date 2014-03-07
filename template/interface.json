@@ -117,7 +117,29 @@
                             {
                                 "key": "github",
                                 "title": "Github",
-                                "default_value": "Github ID"
+                                "default_value": "Github URL"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title":"Comment",
+                "title_zh_cn":"评论代码",
+                "cells":[
+                    {
+                        "parts_per_line": 3,
+                        "parts":[
+                            {
+                                "key": "disqus",
+                                "title": "disqus",
+                                "default_value": "disqus shortname"
+                            },
+                            {
+                                "key": "duoshuo",
+                                "title": "duoshuo",
+                                "title_zh_cn": "多说",
+                                "default_value": "duoshuo shortname"
                             }
                         ]
                     }
