@@ -12,7 +12,6 @@ code,pre,blockquote{
     white-space: pre-wrap;
     word-wrap: break-word;
     background: none repeat scroll 0 0 #F5F5F5;
-    border: 1px solid #DADADA;
     overflow-x: auto;
 }
 
