@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}
 {% if not tags %}
-Tags
+{{ site.title }} / Tags
 {% else %}
-Tag - {{ tags | join(' ') }}
+{{ site.title }} / Tags / {{ tags | join(' ') }}
 {% endif %}
 {% endblock %}
 

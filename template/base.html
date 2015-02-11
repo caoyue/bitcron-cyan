@@ -1,44 +1,44 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>{% block title %} {% endblock %}</title>
-	<link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
-	<link rel="icon" type="image/png" href="/t/img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="/t/css/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
+    <link rel="icon" type="image/png" href="/t/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/t/css/style.css">
 </head>
 <body>
-	<div class="wrap">
-		<div class="header">
-			<a href="/">{{ site.title }}</a>
-			<span>{{ site.raw_content }}</span>
-		</div>
-		<div class="left">
-			<ul class="list">
-				<li><a href="/" title="Home">home</a></li>
-				<li><a href="/archive" title="Archive">archive</a></li>
-				<li><a href="/tags" title="Archive">tags</a></li>
+    <div class="wrap">
+        <div class="header">
+            <a href="/">{{ site.title }}</a>
+            <span>{{ site.raw_content }}</span>
+        </div>
+        <div class="left">
+            <ul class="list">
+                <li><a href="/" title="Home">home</a></li>
+                <li><a href="/archive" title="Archive">archive</a></li>
+                <li><a href="/tags" title="Archive">tags</a></li>
                 {% if site.configs.twitter %}
-                	<li><a href="{{ site.configs.twitter }}" target="_blank">twitter</a></li>
+                    <li><a href="{{ site.configs.twitter }}" target="_blank">twitter</a></li>
                 {% endif %}
                 {% if site.configs.weibo %}
-                	<li><a href="{{ site.configs.weibo }}" target="_blank">weibo</a></li>
+                    <li><a href="{{ site.configs.weibo }}" target="_blank">weibo</a></li>
                 {% endif %}
                 {% if site.configs.douban %}
-                	<li><a href="{{ site.configs.douban }}" target="_blank">douban</a></li>
+                    <li><a href="{{ site.configs.douban }}" target="_blank">douban</a></li>
                 {% endif %}
                 {% if site.configs.github %}
-                	<li><a href="{{ site.configs.github }}" target="_blank">github</a></li>
+                    <li><a href="{{ site.configs.github }}" target="_blank">github</a></li>
                 {% endif %}
-			</ul>
-		</div>
-		<div class="right">
-			{% block content %}
-    		{% endblock %}
-		</div>
-		<div class="footer">
-			©2014 <a href="http://{{ site.domain }}">{{ site.title }}</a>. Designed by <a href="http://caoyue.me" target="_blank">caoyue</a>. Powered by <a href="http://farbox.com" target="_blank">Farbox</a>.
-		</div>
-	</div>
+            </ul>
+        </div>
+        <div class="right">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            ©2015 <a href="http://{{ site.domain }}">{{ site.title }}</a>. designed by <a href="http://caoyue.me" target="_blank">caoyue</a>. powered by <a href="http://farbox.com" target="_blank">farbox</a>.
+        </div>
+    </div>
 </body>
 </html>
