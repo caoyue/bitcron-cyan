@@ -89,6 +89,10 @@ code, pre, blockquote {
     word-wrap: break-word;
 }
 
+pre code {
+  padding-left: 0;
+}
+
 textarea {
     color: rgba(0,0,0,.6);
     font-family: 'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei';
