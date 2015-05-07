@@ -262,6 +262,20 @@ table tr:nth-child(2n) {
 .listing-item,.listing_title {
     width: 61%;
 }
+
+.footnotes ol{
+  color:gray;
+  font-size: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+a[rel="footnote"]:before{
+  content:"[";
+}
+a[rel="footnote"]:after{
+  content:"]";
+}
 /* content end */
 
 /* For Mobile and small screen*/
