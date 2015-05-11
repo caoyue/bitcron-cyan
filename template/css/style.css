@@ -10,7 +10,7 @@ body,html {
 body {
     color: rgba(45, 65, 80, 0.9);
     font-size: 16px;
-    font-family: 'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei';
+    font-family: 'Segoe UI', Verdana, Arial,'Hiragino Sans GB','Microsoft YaHei', sans-serif;
 }
 
 ::selection {
@@ -81,7 +81,7 @@ a:hover {
 }
 
 code, pre, blockquote {
-    font-family: "Deja Vu Sans Mono",Consolas,Monaco,"Courier New",Courier,monospace;
+    font-family: "Deja Vu Sans Mono", Consolas, Monaco, "Courier New", Courier, 'Hiragino Sans GB','Microsoft YaHei';
     padding: 1px 10px;
     line-height: 1.8;
     background: none repeat scroll 0 0 #F5F5F5;
@@ -95,7 +95,7 @@ pre code {
 
 textarea {
     color: rgba(0,0,0,.6);
-    font-family: 'Segoe UI',Verdana,Arial,'Hiragino Sans GB','Microsoft YaHei';
+    font-family: 'Segoe UI', Verdana, Arial,'Hiragino Sans GB', 'Microsoft YaHei';
     border: rgba(37, 187, 196, 0.3) solid 1px;
     padding: 5px;
 }
@@ -300,7 +300,7 @@ a[rel="footnote"]:after{
 
 /* code highlight */
 .hll { background-color: #ffffcc }
-.c { color: #60a0b0; font-style: italic } /* Comment */
+.c { color: rgba(55,55,55,0.5); } /* Comment */
 /*.err { border: 1px solid #FF0000 } /* Error */
 .k { color: #007020; font-weight: bold } /* Keyword */
 .o { color: #666666 } /* Operator */
