@@ -276,6 +276,13 @@ a[rel="footnote"]:before{
 a[rel="footnote"]:after{
   content:"]";
 }
+
+/* for gist */
+.gist table td, .gist table td {
+  border: none;
+}
+
+
 /* content end */
 
 /* For Mobile and small screen*/

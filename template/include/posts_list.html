@@ -8,7 +8,7 @@
     </div>
     <div class="info"><span>posted on {{ post.date | date('%Y-%m-%d %H:%M') }}</span>
         {% for tag in post.tags %}
-        <a href="/tags/{{ tag }}">{{ tag }}</a>
+        <a href="/tags/{{ tag | urlencode }}">{{ tag }}</a>
         {% endfor %}</div>
 </div>
 {% endfor %}

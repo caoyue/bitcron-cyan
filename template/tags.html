@@ -12,7 +12,7 @@
 <ul class='listing list'>
 {% for name,count in site.tags %}
     <li class="listing-item">
-        <a href="/tags/{{ name }}">{{ name }}({{ count }})</a>
+        <a href="/tags/{{ name | urlencode }}">{{ name }}({{ count }})</a>
     </li>
 {% endfor %}
 </ul>
