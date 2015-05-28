@@ -17,8 +17,9 @@
 {% endfor %}
 </ul>
 {% else %}
+{% set posts = get_data(type='post', tags=tags, with_page=True, limit=50, pager_name='tag_posts') %}
 <ul class="list_with_title list">
-    <li class="listing_title">{{ tags | join(' ') }}({{ posts | length }})</li>
+    <li class="listing_title">{{ tags | join(' ') }}({{ paginator.total_count }})</li>
     <ul class='listing list'>
     {% for post in posts %}
         <li class="listing-item">
@@ -27,5 +28,15 @@
     {% endfor %}
     </ul>
 </ul>
+<div class="pager">
+    {% set paginator = get_paginator('tag_posts') %}
+    {% if paginator.has_previous %}
+    <a class="pre" href="{{ paginator.previous_page_url }}">Previous</a>
+    {% endif %}
+    &nbsp;&nbsp;&nbsp;
+    {% if paginator.has_next %}
+    <a class="next" href="{{ paginator.next_page_url}}">Next</a>
+    {% endif %}
+</div>
 {% endif %}
 {% endblock %}
