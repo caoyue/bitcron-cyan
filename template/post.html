@@ -10,10 +10,13 @@
     <div class="content">
         {{ post.content }}
     </div>
-    <div class="info"><span>Posted on {{ post.date | date('%Y-%m-%d %H:%M') }}</span>
-        {% for tag in post.tags %}
-        <a href="/tags/{{ tag | urlencode }}">{{ tag }}</a>
-        {% endfor %}</div>
+    <div>
+        <ul class="info">
+            <li>posted on {{ post.date | date('%Y-%m-%d %H:%M') }}</li>
+            {% for tag in post.tags %}
+            <li><a href="/tags/{{ tag | urlencode }}">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
     {% if site.configs.disqus %}
     <div id="disqus_thread" class="comments"></div>
