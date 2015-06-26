@@ -37,6 +37,11 @@
                 {% if site.configs.github %}
                     <li class="social"><a href="{{ site.configs.github }}" target="_blank">github</a></li>
                 {% endif %}
+                {% if request.is_admin %}
+                <li><a href="/admin" title="Admin" target="_blank">admin</a></li>
+                <li><a href="/service/app/web_editor" title="Editor" target="_blank">Editor</a></li>
+                <li><a href="/admin/code" title="Admin" target="_blank">Code</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="right">

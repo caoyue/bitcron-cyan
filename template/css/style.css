@@ -95,6 +95,7 @@ pre code {
 
 pre {
   padding-left: 30px;
+  border-left: 3px solid rgba(200, 200, 200, 0.3);
 }
 
 textarea {
@@ -372,7 +373,7 @@ a[rel="footnote"]:after{
 .o { color: #666666; } /* Operator */
 .cm { color: #60a0b0; font-style: italic; } /* Comment.Multiline */
 .cp { color: #007020; } /* Comment.Preproc */
-.c1 { color: #60a0b0; font-style: italic; } /* Comment.Single */
+.c1 { color: #60a0b0; } /* Comment.Single */
 .cs { background-color: #fff0f0; color: #60a0b0; } /* Comment.Special */
 .gd { color: #A00000; } /* Generic.Deleted */
 .ge { font-style: italic; } /* Generic.Emph */
