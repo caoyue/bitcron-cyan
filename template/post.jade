@@ -1,0 +1,31 @@
+extends base
+
+block title
+    title {{ site.title }} / {{ post.title }}
+
+block content
+    .entry#content
+        .title= post.title
+        .content= post.content
+        div
+            ul.info
+                li posted on {{ post.date.format('%Y-%m-%d %H:%M') }}
+                for tag in post.tags
+                    li: a(href="/tags/{{ tag | urlencode }}")= tag
+                if request.is_admin
+                    li: a(href="{{ post.url }}?action=edit", target="_blank") Edit
+
+        //- 系统评论框
+        //- +utils.html_comments(post)
+        .comments#disqus_thread
+        script
+            var disqus_shortname = 'caoyue';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        noscript
+            |Please enable JavaScript to view the
+            a(href="http://disqus.com/?ref_noscript") comments powered by Disqus.
+

@@ -1,0 +1,14 @@
+doctype xml
+rss(version="2.0", xmlns:atom="http://www.w3.org/2005/Atom")
+  channel
+    title= site.title
+    link= site.domain
+    description= site.configs.sub_title
+    atom:link(href="{{ site.domain }}/feed.xml", rel="self", type="application/rss+xml")
+    for post in posts
+      item
+        title= post.title
+        description <![CDATA[!{ post.content }]]>
+        pubDate= post.date.format('%Y-%m-%dT%H:%M:%SZ')
+        link http://{{ site.domain }}{{ post.url }}
+        guid(isPermaLink="true") http://{{ site.domain }}{{ post.url }}

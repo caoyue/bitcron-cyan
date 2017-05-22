@@ -1,0 +1,14 @@
+extends base
+
+block title
+    title {{ site.title }} / Archive
+
+block content
+    ul.list_with_title.list
+        archive = get_data(type='post',limit=300, sort='desc').group('-date:year')
+        for year, posts in archive
+            li.listing_title {{ year }} ({{ posts.length }})
+            ul.listing.list
+                for post in posts
+                    li.listing-item
+                        a(href="{{ post.url }}", title="{{ post.title }}")= post.title

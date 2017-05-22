@@ -1,11 +1,9 @@
-cyan
+bitcron-cyan
 ===============
-a farbox template
+a bitcron template
 
 #### Demo
 + [Demo](http://blog.caoyue.me)
 
-#### Install
-+ 放到网站文件夹下
-+ 在后台配置网站信息
-+ 同步完成，enjoy!
+#### disqus 配置
++ 修改 `post.jade` 中的 `var disqus_shortname = '';` 为你自己的 disqus shortname

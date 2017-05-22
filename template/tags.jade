@@ -1,0 +1,30 @@
+extends base
+
+tag = request.get_offset_path(1)
+block title
+    if not tag
+        title {{ site.title }} / Tags
+    else
+        title {{ site.title }} / Tags / {{ tag }}
+
+block content
+    if not tag
+        ul.listing.list
+            for name,count in site.tags
+                li.listing-item
+                    a(href="/tags/{{ name | urlencode }}") {{ name }}({{ count }})
+    else
+        posts = get_data(type='post', tags=tag, with_page=True, limit=50, pager_name='tag_posts')
+        ul.list_with_title.list
+            li.listing_title {{ tag }} ({{ paginator.total_count }})
+            ul.listing.list
+                for post in posts
+                    li.listing-item
+                        a(href="{{ post.url }}", title="{{ post.title }}")= post.title
+        .pager
+            paginator= get_paginator('tag_posts')
+            if paginator.has_previous
+                a.pre(href="{{ paginator.previous_page_url }}") Previous
+            |   
+            if paginator.has_next
+                a.next(href="{{ paginator.next_page_url}}") Next
