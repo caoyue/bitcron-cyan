@@ -13,7 +13,7 @@ html {
 body {
     color: rgba(0, 0, 0, .6);
     font-size: 16px;
-    font-family: 'Segoe UI', Verdana, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-family: source-han-serif-sc, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 }
 
 ::selection {
@@ -90,7 +90,7 @@ blockquote {
     padding: 1px 10px;
     background: none repeat scroll 0 0 #F5F5F5;
     word-wrap: break-word;
-    font-family: "Deja Vu Sans Mono", Consolas, Monaco, "Courier New", Courier, 'Hiragino Sans GB', 'Microsoft YaHei';
+    font-family: "Deja Vu Sans Mono", Consolas, Monaco, "Courier New", Courier, source-han-serif-sc, 'Hiragino Sans GB', 'Microsoft YaHei', monospace;
     line-height: 1.8;
 }
 
@@ -158,7 +158,7 @@ table tr:nth-child(2n) {
 }
 
 .header {
-    margin: 0 0.7% 0 -15%;
+    margin: 0 0.7% 2% -15%;
     padding: 1.5% 0 1.5% 2.5%;
     font-weight: normal;
     font-size: 36px;
@@ -289,7 +289,7 @@ table tr:nth-child(2n) {
 }
 
 .comments {
-    margin: 15px 0;
+    margin-top: 100px;
 }
 
 .textarea-wrapper {
